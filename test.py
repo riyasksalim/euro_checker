@@ -115,4 +115,9 @@ async def main():
             await asyncio.sleep(min_delay)
 
 # Run the script
+
+import subprocess
+
+# Automatically installs Playwright browsers (Chromium, Firefox, WebKit)
+subprocess.run(["playwright", "install"], check=True)
 asyncio.run(main())
