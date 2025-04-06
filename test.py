@@ -65,7 +65,7 @@ def send_telegram_message(user_id, rate, threshold):
 # Playwright logic to fetch the rate
 async def get_current_exchange_rate(playwright):
     try:
-        browser = await playwright.chromium.launch(headless=True, args=["--start-maximized"])
+        browser = await playwright.chromium.launch()
         context = await browser.new_context(viewport=None)
         page = await context.new_page()
 
